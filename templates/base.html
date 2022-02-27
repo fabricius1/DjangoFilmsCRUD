@@ -1,0 +1,72 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+
+{% block title %}
+    {% if title %}
+        <title>{{title}} | My Films</title> 
+    {% else %}
+        <title>My Films Table</title>
+    {% endif %}
+{% endblock title %}
+
+{% block head %}
+{% endblock head %}
+    
+</head>
+
+<body>
+
+<div class="container-fluid">
+    
+    <!-- NAVIGATION BAR -->
+
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="d-flex justify-content-between px-5 mx-auto" style="width: 80%;">
+            <span class="navbar-text text-white">DJANGO C.R.U.D.</span>
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link active" href="{% url 'films:all' %}">Films</a>
+                </li>
+                
+                <!-- 
+                ##
+                ## UNCOMMENT THESE LINES IF YOU HAVE A FUNCTIONAL CRUD FOR THE GENRE MODEL 
+                ## CHANGE ALSO THE URL INFO 'films:all' to 'films:genre_all'     
+                
+                <li class="nav-item active">
+                    <a class="nav-link active" href="{% url 'films:all' %}">Genres</a>
+                </li>
+
+                -->
+
+                <li class="nav-item active">
+                    <a class="nav-link active" href="https://linktr.ee/fabriciobarbacena" target="_blank">My Social Media</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- END OF NAVIGATION BAR -->
+
+</div>
+
+{% block content %}
+{% endblock content %}
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
